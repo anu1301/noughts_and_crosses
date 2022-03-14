@@ -37,9 +37,39 @@ def input_letter_choice():
     else:
         return ['O', 'X']
 
-    def who_starts_play():
-        # Randomly choose the player who plays first.
-        if random.randint(0, 1) == 0:
-            return 'computer'
-        else:
-            return 'player'
+
+def who_starts_play():
+    """
+    Randomly choose the player who plays first.
+    """
+    if random.randint(0, 1) == 0:
+        return 'computer'
+    else:
+        return 'player'
+
+
+def play_again():
+    """
+    Returns True if the player wants to play agian.
+    """
+    print('Do you want to play again? (yes or no)')
+    return input().lower().startswith('y')
+
+
+def making_move(board, letter, move):
+    board[move] = letter
+
+
+def is_winner(bo, le):
+    """
+    Returns True if a player has won. bo is used for board 
+    and le for letter to shorten the code.
+    """
+    return ((bo[7] == le and bo[8] == le and bo[9] == le) or  # across top
+            (bo[4] == le and bo[5] == le and bo[6] == le) or  # across middle
+            (bo[1] == le and bo[2] == le and bo[3] == le) or  # across bottom
+            (bo[7] == le and bo[4] == le and bo[1] == le) or  # down left
+            (bo[8] == le and bo[5] == le and bo[2] == le) or  # down middle
+            (bo[9] == le and bo[6] == le and bo[3] == le) or  # down right
+            (bo[7] == le and bo[5] == le and bo[3] == le) or  # diagonal
+            (bo[9] == le and bo[5] == le and bo[1] == le))  # diagonal
