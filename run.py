@@ -31,7 +31,15 @@ def input_letter_choice():
         letter = input().upper()
 
     if letter == 'X':
-        # First character is player's letter, and second the computers
+        # First character is player's letter,
+        # and second the computers
         return ['X', 'O']  
     else:
         return ['O', 'X']
+
+    def who_starts_play():
+        # Randomly choose the player who plays first.
+        if random.randint(0, 1) == 0:
+            return 'computer'
+        else:
+            return 'player'
