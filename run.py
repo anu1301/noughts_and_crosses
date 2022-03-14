@@ -73,3 +73,27 @@ def is_winner(bo, le):
             (bo[9] == le and bo[6] == le and bo[3] == le) or  # down right
             (bo[7] == le and bo[5] == le and bo[3] == le) or  # diagonal
             (bo[9] == le and bo[5] == le and bo[1] == le))  # diagonal
+
+
+def reset_board(board):
+    # Resets board
+    reset_board = []
+
+    for i in board:
+        reset_board.append(i)
+
+    return reset_board
+
+
+def is_space_free(board, move):
+    # Checks if a move is available
+    return board[move] == ' '
+
+
+def get_player_move(board):
+    # Allows the player to make his/her move
+    move = ' '
+    while move not in '1 2 3 4 5 6 7 8 9'.split() or not is_space_free(board, int(move)):
+        print('Make your next move(1-9)')
+        move = input()
+    return int(move)         
