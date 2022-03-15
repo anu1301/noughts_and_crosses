@@ -150,3 +150,13 @@ def get_computer_move(board, computer_letter):
     return choose_random_move(board, [2, 4, 6, 8])
 
 
+def is_board_full(board):
+    """
+    Checks to see if every space on the board has been taken, 
+    and returns True, Otherwise returns False.
+    """
+    for i in range(1, 10):
+        if is_space_free(board, i):
+            return False
+    return True
+
