@@ -97,3 +97,18 @@ def get_player_move(board):
         print('Make your next move(1-9)')
         move = input()
     return int(move)         
+
+
+def choose_random_move(board, moves_list):
+    """
+    Returns a valid and returns None if there is no valid move.
+    """
+    possible_moves = []
+    for i in moves_list:
+        if is_space_free(board, i):
+            possible_moves.append(i)
+
+    if len(possible_moves) != 0:
+        return random.choice(possible_moves)
+    else:
+        return None
