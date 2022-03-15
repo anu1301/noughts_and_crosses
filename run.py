@@ -195,4 +195,23 @@ while True:
                     break
                 else:
                     turn = 'computer'
-                    
+
+        else:
+            # Computer's turn.
+            move = get_computer_move(the_board, computer_letter)
+            making_move(the_board, computer_letter, move)
+
+            if is_winner(the_board, computer_letter):
+                print_board(the_board)
+                print('The computer has won! You lose.')
+                game_is_playing = False
+            else:
+                if is_board_full(the_board):
+                    print_board(the_board)
+                    print('The game is a tie!')
+                    break
+                else:
+                    turn = 'player'
+
+    if not play_again():
+        break
