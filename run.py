@@ -22,7 +22,7 @@ def print_board(board):
 def input_player_letter():
     """
     Lets the player choose X or O.
-    Returns as list with the player's choice as first item, 
+    Returns as list with the player's choice as first item,
     and the computer's letter as the second.
     """
     letter = ''
@@ -33,7 +33,7 @@ def input_player_letter():
     if letter == 'X':
         # First character is player's letter,
         # and second the computers
-        return ['X', 'O']  
+        return ['X', 'O']
     else:
         return ['O', 'X']
 
@@ -62,7 +62,7 @@ def making_move(board, letter, move):
 
 def is_winner(bo, le):
     """
-    Returns True if a player has won. bo is used for board 
+    Returns True if a player has won. bo is used for board
     and le for letter to shorten the code.
     """
     return ((bo[7] == le and bo[8] == le and bo[9] == le) or  # across top
@@ -99,10 +99,13 @@ def get_player_move(board):
     Allows the player to make his/her move
     """
     move = ' '
-    while move not in '1 2 3 4 5 6 7 8 9'.split() or not is_space_free(board, int(move)):
+    while (
+        move not in '1 2 3 4 5 6 7 8 9'.split() or
+        not is_space_free(board, int(move))
+    ):
         print('Make your next move(1-9)')
         move = input()
-    return int(move)         
+    return int(move)
 
 
 def choose_random_move(board, moves_list):
@@ -152,7 +155,7 @@ def get_computer_move(board, computer_letter):
 
 def is_board_full(board):
     """
-    Checks to see if every space on the board has been taken, 
+    Checks to see if every space on the board has been taken,
     and returns True, Otherwise returns False.
     """
     for i in range(1, 10):
@@ -173,3 +176,23 @@ while True:
     turn = who_starts_play()
     print('The ' + turn + ' will go first.')
     game_is_playing = True
+
+    while game_is_playing:
+        if turn == 'player':
+            # Player's turn.
+            print_board(the_board)
+            move = get_player_move(the_board)
+            making_move(the_board, player_letter, move)
+
+            if is_winner(the_board, player_letter):
+                print_board(the_board)
+                print('Well done! You have won the game!')
+                game_is_playing = False
+            else:
+                if is_board_full(the_board):
+                    print_board(the_board)
+                    print('The game is a tie!')
+                    break
+                else:
+                    turn = 'computer'
+                    
