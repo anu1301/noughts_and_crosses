@@ -1,4 +1,7 @@
 import random
+"""
+Import random library to use in random selection
+"""
 
 
 def print_board(board):
@@ -19,7 +22,7 @@ def print_board(board):
     print('   |   |')
 
 
-def input_letter_choice():
+def input_player_letter():
     """
     Lets the player choose X or O.
     Returns as list with the player's choice as first item, 
@@ -75,8 +78,10 @@ def is_winner(bo, le):
             (bo[9] == le and bo[5] == le and bo[1] == le))  # diagonal
 
 
-def reset_board(board):
-    # Resets board
+def get_board_copy(board):
+    """
+    Resets board
+    """
     reset_board = []
 
     for i in board:
@@ -86,12 +91,16 @@ def reset_board(board):
 
 
 def is_space_free(board, move):
-    # Checks if a move is available
+    """
+    Checks if a move is available
+    """
     return board[move] == ' '
 
 
 def get_player_move(board):
-    # Allows the player to make his/her move
+    """
+    Allows the player to make his/her move
+    """
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not is_space_free(board, int(move)):
         print('Make your next move(1-9)')
@@ -101,7 +110,7 @@ def get_player_move(board):
 
 def choose_random_move(board, moves_list):
     """
-    Returns a valid and returns None if there is no valid move.
+    Returns a valid move and returns None if there is no valid move.
     """
     possible_moves = []
     for i in moves_list:
@@ -112,3 +121,21 @@ def choose_random_move(board, moves_list):
         return random.choice(possible_moves)
     else:
         return None
+
+
+def get_computer_move(board, computer_letter):
+    """
+    Computer determines where to move and returns that move.
+    """
+    if computer_letter == 'X':
+        player_letter = 'O'
+    else:
+        player_letter = 'X'
+
+    # Checks if we can win in the next move
+    for i in range(1, 10):
+        copy = get_board_copy(board)
+        if is_space_free(copy, i):
+            making_move(copy, computer_Letter, i)
+            if is_winner(copy, computer_letter):
+                return i
