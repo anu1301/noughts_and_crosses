@@ -1,7 +1,4 @@
 import random
-"""
-Import random library to use in random selection
-"""
 
 
 def print_board(board):
@@ -80,14 +77,14 @@ def is_winner(bo, le):
 
 def get_board_copy(board):
     """
-    Resets board
+    Creates a copy board
     """
-    reset_board = []
+    copy_board = []
 
     for i in board:
-        reset_board.append(i)
+        copy_board.append(i)
 
-    return reset_board
+    return copy_board
 
 
 def is_space_free(board, move):
@@ -132,10 +129,24 @@ def get_computer_move(board, computer_letter):
     else:
         player_letter = 'X'
 
-    # Checks if we can win in the next move
+    # Checks if the player can win in next move
     for i in range(1, 10):
         copy = get_board_copy(board)
         if is_space_free(copy, i):
-            making_move(copy, computer_Letter, i)
+            making_move(copy, computer_letter, i)
             if is_winner(copy, computer_letter):
                 return i
+
+    # Checks if corners are free and makes move.
+    move = choose_random_move(board, [1, 3, 7, 9])
+    if move is not None:
+        return move
+
+    # Checkes if center is free and makes move
+    if is_space_free(board, 5):
+        return 5
+
+    # Checks sides and make move.
+    return choose_random_move(board, [2, 4, 6, 8])
+
+
