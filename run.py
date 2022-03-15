@@ -160,3 +160,16 @@ def is_board_full(board):
             return False
     return True
 
+
+print('Welcome to Noughts & Crosses!')
+
+
+while True:
+    """
+    Resets the board
+    """
+    the_board = [' '] * 10
+    player_letter, computer_letter = input_player_letter()
+    turn = who_starts_play()
+    print('The ' + turn + ' will go first.')
+    game_is_playing = True
