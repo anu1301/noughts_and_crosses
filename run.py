@@ -1,5 +1,7 @@
 import random
 
+print('Welcome to Noughts & Crosses!')
+
 
 def print_board(board):
     """
@@ -7,7 +9,7 @@ def print_board(board):
     10 strings representing the cells in the board (ignore index 0)
     """
     print('   |   |')
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
+    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     print('   |   |')
     print('-----------')
     print('   |   |')
@@ -15,7 +17,7 @@ def print_board(board):
     print('   |   |')
     print('-----------')
     print('   |   |')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
+    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
     print('   |   |')
 
 
@@ -65,14 +67,14 @@ def is_winner(bo, le):
     Returns True if a player has won. bo is used for board
     and le for letter to shorten the code.
     """
-    return ((bo[7] == le and bo[8] == le and bo[9] == le) or  # across top
+    return ((bo[1] == le and bo[2] == le and bo[3] == le) or  # across top
             (bo[4] == le and bo[5] == le and bo[6] == le) or  # across middle
-            (bo[1] == le and bo[2] == le and bo[3] == le) or  # across bottom
-            (bo[7] == le and bo[4] == le and bo[1] == le) or  # down left
-            (bo[8] == le and bo[5] == le and bo[2] == le) or  # down middle
-            (bo[9] == le and bo[6] == le and bo[3] == le) or  # down right
-            (bo[7] == le and bo[5] == le and bo[3] == le) or  # diagonal
-            (bo[9] == le and bo[5] == le and bo[1] == le))  # diagonal
+            (bo[7] == le and bo[8] == le and bo[9] == le) or  # across bottom
+            (bo[1] == le and bo[4] == le and bo[7] == le) or  # down left
+            (bo[2] == le and bo[5] == le and bo[8] == le) or  # down middle
+            (bo[3] == le and bo[6] == le and bo[9] == le) or  # down right
+            (bo[3] == le and bo[5] == le and bo[7] == le) or  # diagonal
+            (bo[1] == le and bo[5] == le and bo[9] == le))  # diagonal
 
 
 def get_board_copy(board):
@@ -162,10 +164,6 @@ def is_board_full(board):
         if is_space_free(board, i):
             return False
     return True
-
-
-print('Welcome to Noughts & Crosses!')
-
 
 while True:
     """
