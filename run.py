@@ -32,12 +32,7 @@ def input_player_letter():
     letter = ''
     while not (letter == 'X' or letter == 'O'):
         print('Do you want to be X or O?')
-        letter = input().upper().isalpha()
-
-        try:
-            letter.isalpha()
-        except:
-            print("Please enter X or O")
+        letter = input().upper()
 
     if letter == 'X':
         # First character is player's letter,
@@ -114,7 +109,7 @@ def get_player_move(board):
         move not in '1 2 3 4 5 6 7 8 9'.split() or
         not is_space_free(board, int(move))
     ):
-        print('Make your next move(1-9)')
+        print('Make your move(1-9)')
         move = input()
     return int(move)
 
@@ -175,7 +170,18 @@ def is_board_full(board):
     return True
 
 
-print('Welcome to Noughts & Crosses!')
+print('Welcome to Noughts & Crosses!\n')  # Welcome message
+# Instructions to the game
+print(
+    "A game for two players who choose either 'O' or 'X',"
+    "to represent them on a 3 x 3 grid.\n"
+    "The player who succeeds in placing three marks "
+    "in a horizontal, vertical or diagonal row wins.\n"
+    "In this game you will play against the computer\n"
+    "The grid is referenced by numbers - 1-3 along the top row from left to right, "
+    "4-6 middle row from left to right and 7-9 bottom row from left to right\n"
+    "May the best man/woman/automaton win!"
+)
 
 while True:
     """
@@ -224,5 +230,9 @@ while True:
                     turn = 'player'
 
     if not play_again():
-        print("Thank you for playing")
+        print("Thank you for playing\n")
+        print(
+            "If you would like to play again,"
+            " press the\n'run program' button above!\n"
+        )
         break
