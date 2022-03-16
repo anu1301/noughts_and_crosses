@@ -1,6 +1,8 @@
 import random
 
-print('Welcome to Noughts & Crosses!')
+print("\033[1;36m")
+print("NOUGHTS & CROSSES".center(50, "="))
+print("\n")
 
 
 def print_board(board):
@@ -167,6 +169,9 @@ def is_board_full(board):
             return False
     return True
 
+
+print('Welcome to Noughts & Crosses!')
+
 while True:
     """
     Resets the board
@@ -215,4 +220,4 @@ while True:
 
     if not play_again():
         print("Thank you for playing")
-    break
+        break
