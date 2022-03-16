@@ -1,7 +1,7 @@
 import random
 
 print("\033[1;36m")
-print("NOUGHTS & CROSSES".center(50, "="))
+print("NOUGHTS & CROSSES".center(30, "="))
 print("\n")
 
 
@@ -32,7 +32,12 @@ def input_player_letter():
     letter = ''
     while not (letter == 'X' or letter == 'O'):
         print('Do you want to be X or O?')
-        letter = input().upper()
+        letter = input().upper().isalpha()
+
+        try:
+            letter.isalpha()
+        except:
+            print("Please enter X or O")
 
     if letter == 'X':
         # First character is player's letter,
