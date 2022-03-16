@@ -62,19 +62,21 @@ def making_move(board, letter, move):
     board[move] = letter
 
 
-def is_winner(bo, le):
+def is_winner(brd, lttr):
     """
-    Returns True if a player has won. bo is used for board
-    and le for letter to shorten the code.
+    Returns True if a player has won. brd is used for board
+    and lttr for letter to shorten the code.
     """
-    return ((bo[1] == le and bo[2] == le and bo[3] == le) or  # across top
-            (bo[4] == le and bo[5] == le and bo[6] == le) or  # across middle
-            (bo[7] == le and bo[8] == le and bo[9] == le) or  # across bottom
-            (bo[1] == le and bo[4] == le and bo[7] == le) or  # down left
-            (bo[2] == le and bo[5] == le and bo[8] == le) or  # down middle
-            (bo[3] == le and bo[6] == le and bo[9] == le) or  # down right
-            (bo[3] == le and bo[5] == le and bo[7] == le) or  # diagonal
-            (bo[1] == le and bo[5] == le and bo[9] == le))  # diagonal
+    return (
+        (brd[1] == lttr and brd[2] == lttr and brd[3] == lttr) or  # top line
+        (brd[4] == lttr and brd[5] == lttr and brd[6] == lttr) or  # mid line
+        (brd[7] == lttr and brd[8] == lttr and brd[9] == lttr) or  # bottom
+        (brd[1] == lttr and brd[4] == lttr and brd[7] == lttr) or  # down left
+        (brd[2] == lttr and brd[5] == lttr and brd[8] == lttr) or  # mid line
+        (brd[3] == lttr and brd[6] == lttr and brd[9] == lttr) or  # down right
+        (brd[3] == lttr and brd[5] == lttr and brd[7] == lttr) or  # diagonal
+        (brd[1] == lttr and brd[5] == lttr and brd[9] == lttr)  # diagonal
+    )
 
 
 def get_board_copy(board):
@@ -184,7 +186,7 @@ while True:
 
             if is_winner(the_board, player_letter):
                 print_board(the_board)
-                print('Well done! You have won the game!')
+                print('Well done! You won this game!')
                 game_is_playing = False
             else:
                 if is_board_full(the_board):
@@ -201,7 +203,7 @@ while True:
 
             if is_winner(the_board, computer_letter):
                 print_board(the_board)
-                print('The computer has won! You lose.')
+                print('The computer won this game!')
                 game_is_playing = False
             else:
                 if is_board_full(the_board):
@@ -212,4 +214,5 @@ while True:
                     turn = 'player'
 
     if not play_again():
-        break
+        print("Thank you for playing")
+    break
