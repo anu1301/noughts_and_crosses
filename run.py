@@ -175,13 +175,16 @@ print('Welcome to Noughts & Crosses!\n')  # Welcome message
 print(
     "A game for two players who choose either 'O' or 'X',"
     "to represent them on a 3 x 3 grid.\n"
+    "\n"
     "The player who succeeds in placing three marks "
     "in a horizontal, vertical or diagonal row wins.\n"
-    "In this game you will play against the computer\n"
+    "\n"
+    "In this game you will play against the computer"
     "The grid is referenced by numbers - 1-3 along the top row "
     "from left to right, 4-6 middle row from left to right "
     "and 7-9 bottom row from left to right\n"
-    "May the best man/woman/automaton win!"
+    "\n"
+    "May the best man/woman/automaton win!\n"
 )
 
 while True:
