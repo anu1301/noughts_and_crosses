@@ -10,6 +10,7 @@ def print_board(board):
     This function prints the board out, which consists of a list of
     10 strings representing the cells in the board (ignore index 0)
     """
+    print("\n")
     print('   |   |')
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
     print('   |   |')
@@ -21,6 +22,7 @@ def print_board(board):
     print('   |   |')
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
     print('   |   |')
+    print("\n")
 
 
 def input_player_letter():
@@ -31,7 +33,7 @@ def input_player_letter():
     """
     letter = ''
     while not (letter == 'X' or letter == 'O'):
-        print('Do you want to be X or O?')
+        print('Do you want to be X or O?\n')
         letter = input().upper()
 
     if letter == 'X':
@@ -46,6 +48,7 @@ def who_starts_play():
     """
     Randomly choose the player who plays first.
     """
+    print("\n")
     if random.randint(0, 1) == 0:
         return 'computer'
     else:
@@ -56,8 +59,16 @@ def play_again():
     """
     Returns True if the player wants to play agian.
     """
-    print('Do you want to play again? (yes or no)')
-    return input().lower().startswith('y')
+    play_again_quit = input(
+        "Would you like to play "
+        "again?\nEnter y for Yes or n for No:\n"
+    )
+    # Make sure users input is valid.
+    while play_again_quit != "y" and play_again_quit != "n":
+        play_again_quit = input(
+            "\n\033[1;31mInvalid input!\nif you want "
+            "to play again enter y for yes and n for no:\n"
+        )
 
 
 def making_move(board, letter, move):
@@ -109,7 +120,7 @@ def get_player_move(board):
         move not in '1 2 3 4 5 6 7 8 9'.split() or
         not is_space_free(board, int(move))
     ):
-        print('Make your move(1-9)')
+        print('Make your move(1-9)\n')
         move = input()
     return int(move)
 
@@ -179,7 +190,7 @@ print(
     "The player who succeeds in placing three marks "
     "in a horizontal, vertical or diagonal row wins.\n"
     "\n"
-    "In this game you will play against the computer"
+    "In this game you will play against the computer. "
     "The grid is referenced by numbers - 1-3 along the top row "
     "from left to right, 4-6 middle row from left to right "
     "and 7-9 bottom row from left to right\n"
@@ -234,7 +245,7 @@ while True:
                     turn = 'player'
 
     if not play_again():
-        print("Thank you for playing\n")
+        print("\033[1;36mThank you for playing\n")
         print(
             "If you would like to play again,"
             " press the\n'run program' button above!\n"
