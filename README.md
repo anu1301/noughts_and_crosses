@@ -161,6 +161,8 @@ The application has been deployed to Heroku as follows:
 
 * Marcel Mulder for his support and guidance throughout the process.
 
+#### Manual Testing Table
+
 
 
 
