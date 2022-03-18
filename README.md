@@ -90,7 +90,7 @@ I then validated the code finally in PEP8 which confirmed that there were no err
 <img src="images/pep8-validator.PNG">
 
 ### Manual Testing
-* See table at the end of the Readment document.
+* See table at the end of the Readme document.
 <table>
 <tr>
 <th>Feature</th>
