@@ -69,7 +69,7 @@ The game colour is in cyan, rather than the standard white, as it is much easier
 
 * Python3
 
-### Frameworks, Libraries and Programs Used
+### Libraries and Programs Used
 
 * GitPod] - used for writing code, committing, and then pushing to GitHub.
 
@@ -90,44 +90,44 @@ I then validated the code finally in PEP8 which confirmed that there were no err
 <img src="images/pep8-validator.PNG">
 
 ### Manual Testing
-
+* See table at the end of the Readment document.
 <table>
-    <tr>
-        <th>Feature</th>
-        <th>Outcome</th>
-        <th>Example</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td>Player choice of X or O Input</td>
-        <td>invalidate an integer</td>
-        <td><img src="images/manual-test-one.png"></td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td>Player choice of X or O Input</td>
-        <td>invalidate a letter that is not X or O</td>
-        <td><img src="images/manual-test-two.png"></td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td>Player choice of X or O Input</td>
-        <td>invalidate empty space</td>
-        <td><img src="images/manual-test.PNG"></td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td>Player move Input</td>
-        <td>invalidate a letter input that is not an integer 1-9</td>
-        <td><img src="images/manual-test-three.png"></td>
-        <td>Pass</td>
-    </tr>
-    <tr>
-        <td>Player move Input</td>
-        <td>invalidate choice of an occupied cell</td>
-        <td><img src="images/manual-test-four.png"></td>
-        <td>Pass</td>
-    </tr>
+<tr>
+<th>Feature</th>
+<th>Outcome</th>
+<th>Example</th>
+<th>Pass/Fail</th>
+</tr>
+<tr>
+<td>Player choice of X or O Input</td>
+<td>invalidate an integer</td>
+<td><img src="images/manual-test-one.png"></td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Player choice of X or O Input</td>
+<td>invalidate a letter that is not X or O</td>
+<td><img src="images/manual-test-two.png"></td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Player choice of X or O Input</td>
+<td>invalidate empty space</td>
+<td><img src="images/manual-test.PNG"></td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Player move Input</td>
+<td>invalidate a letter input that is not an integer 1-9</td>
+<td><img src="images/manual-test-three.png"></td>
+<td>Pass</td>
+</tr>
+<tr>
+<td>Player move Input</td>
+<td>invalidate choice of an occupied cell</td>
+<td><img src="images/manual-test-four.png"></td>
+<td>Pass</td>
+</tr>
 
 ## Improvements
 
@@ -153,6 +153,13 @@ The application has been deployed to Heroku as follows:
 13. Went back to GitHub, and selected settings of the repository to be deployed.
 14. Selected pages, then chose main branch, saved and successfully published in GitHub aswell. This allowed me to carry on working on my code and at the same time updating the deployed project in Heroku.
 
+## Credits
+
+* I watched many Youtube clips of both tic-tac-toe and battelships for their similarities in code.
+
+* Al Sweigart and Christian Thompson - guidance in programming.
+
+* Marcel Mulder for his support and guidance throughout the process.
 
 
 
