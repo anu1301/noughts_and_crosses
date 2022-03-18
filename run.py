@@ -59,16 +59,8 @@ def play_again():
     """
     Returns True if the player wants to play agian.
     """
-    play_again_quit = input(
-        "Would you like to play "
-        "again?\nEnter y for Yes or n for No:\n"
-    )
-    # Make sure users input is valid.
-    while play_again_quit != "y" and play_again_quit != "n":
-        play_again_quit = input(
-            "\n\033[1;31mInvalid input!\nif you want "
-            "to play again enter y for yes and n for no:\n"
-        )
+    print('Do you want to play again? (yes or no)')
+    return input().lower().startswith('y')
 
 
 def making_move(board, letter, move):

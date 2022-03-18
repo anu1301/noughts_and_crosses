@@ -1,12 +1,12 @@
 # Noughts & Crosses
 
-Noughts and Crosses", also called "Tic-tac-toe" or "Hugs and Kisses", is a game for two players, "O" and "X", who take turns marking the spaces in a 3 x 3 grid.
+Noughts and Crosses", also called "Tic-tac-toe" or "Hugs and Kisses", is an ancient game that billions of people have played over the course of history. While some experts believe the game dates back to the ancient Egyptians, others believe it evolved from an ancient Roman game called Terni Lapilli.
 
-The player who succeeds in placing three marks in a horizontal, vertical or diagonal line wins.
+The modern game is played on a nine-square grid created by drawing lines to create three horizontal rows and three vertical columns. Players alternate marking the squares with Xs and Os, trying to achieve three marks in a row either horizontally, vertically, or diagonally.
 
 <img src="images/am-i-responsive.PNG">
 
-[Click here to go to the live website!](https://love-noughts-and-crosses.herokuapp.com/)
+[Click here to go to the live website](https://love-noughts-and-crosses.herokuapp.com/)
 
 ## Table of contents 
 
