@@ -2,7 +2,7 @@
 
 Noughts and Crosses", also called "Tic-tac-toe" or "Hugs and Kisses", is an ancient game that billions of people have played over the course of history. While some experts believe the game dates back to the ancient Egyptians, others believe it evolved from an ancient Roman game called Terni Lapilli.
 
-The modern game is played on a nine-square grid created by drawing lines to create three horizontal rows and three vertical columns. Players alternate marking the squares with Xs and Os, trying to achieve three marks in a row either horizontally, vertically, or diagonally.
+The modern game is played on a nine-square grid created by drawing lines to create three horizontal rows and three vertical columns. Players alternate marking the squares with 'X's and 'O's, trying to achieve three marks in a row either horizontally, vertically, or diagonally.
 
 <img src="images/am-i-responsive.PNG">
 
@@ -36,7 +36,7 @@ In the first instance the board had to be represented by a pair of vertical and 
 
 <img src="images/nine-cell-grid.PNG">
 
-The board is numbered in a way that a human would expect, and therefore intutive, i.e. uses human logic on past experience (does not take into account cultural differences i.e. there may be cultures that expect flow from right to left).
+The board is numbered in a way that a human would expect, and therefore instinctive, i.e. uses human logic on past experience (does not take into account cultural differences i.e. there may be cultures that expect flow from right to left).
 
 The cells are chosen by their corresponding number when a move is made.
 
@@ -52,7 +52,7 @@ The following flowchart was designed using Lucidchart to map out the flow and lo
 
 The game starts with a welcome message and instructions on how to play the game.
 
-The player is then asked if they want to be 'X' or 'O', and requires input. 
+The player is then asked if they want to be 'X' or 'O' and requires input. 
 
 The game is then started, either by the computer making the first move or the player - as prompted. This is randomly generated.
 
@@ -60,7 +60,7 @@ The moves are required in numeric form (see above board reference).
 
 The player and the computer take turns to make their move, until there is a winner or tie.
 
-The the player is asked if they want to play again.
+The player is asked if they want to play again.
 
 The game colour is in cyan, rather than the standard white, as it is much easier on the eye.
 
@@ -71,7 +71,7 @@ The game colour is in cyan, rather than the standard white, as it is much easier
 
 ### Libraries and Programs Used
 
-* GitPod] - used for writing code, committing, and then pushing to GitHub.
+* GitPod - used for writing code, committing, and then pushing to GitHub.
 
 * GitHub - used to store the project after pushing.
 
@@ -79,11 +79,11 @@ The game colour is in cyan, rather than the standard white, as it is much easier
 
 * PEP8 online check - used to validate the Python code.
 
-* Random - a built in Python library used to ramdomly choose which player went first.
+* Random - a built in Python library used to randomly choose which player went first.
 
 ## Testing
 
-Whilst writing and working on the code I used the terminal/console to test it's functionality. I also tested blocks of code in PEP8 at the time of writing.
+Whilst writing and working on the code I used the terminal/console to test its functionality. I also tested blocks of code in PEP8 at the time of writing.
 
 I then validated the code finally in PEP8 which confirmed that there were no errors.
 
@@ -131,7 +131,7 @@ I then validated the code finally in PEP8 which confirmed that there were no err
 
 ## Improvements
 
-Whilst the majority of the manual testing was successful, there is an improvement that can be made at the end game. The program behaved as it should when entering the 'y' and 'n' input for wanting to play again or not, however, it woul end the game with the exit message when entering anything other than 'y' or 'n'. Unfortunately, I did not have time to address this are due to the lack of time.
+Whilst the majority of the manual testing was successful, there is an improvement that can be made at the end game. The program behaved as it should when entering the 'y' and 'n' input for wanting to play again or not, however, it would end the game with the exit message when entering anything other than 'y' or 'n'. Unfortunately, I did not have time to address this are due to the lack of time.
 
 The other area of improvement I did want to make was providing invalid messages when incorrect input of data was made. Again, it was due to a lack of time that prevented me from addressing this.
 
@@ -151,11 +151,11 @@ The application has been deployed to Heroku as follows:
 11. Click "Connect" next to the repository name.
 12. Choose "Automatic deploys" or "Manual deploys" to deploy your application. I chose automatic, so that any changes I made to the code would be picked up by Heroku.
 13. Went back to GitHub, and selected settings of the repository to be deployed.
-14. Selected pages, then chose main branch, saved and successfully published in GitHub aswell. This allowed me to carry on working on my code and at the same time updating the deployed project in Heroku.
+14. Selected pages, then chose main branch, saved and successfully published in GitHub as well. This allowed me to carry on working on my code and at the same time updating the deployed project in Heroku.
 
 ## Credits
 
-* I watched many Youtube clips of both tic-tac-toe and battelships for their similarities in code.
+* I watched many You tube clips of both tic-tac-toe and battleships for their similarities in code.
 
 * Al Sweigart and Christian Thompson - guidance in programming.
 
